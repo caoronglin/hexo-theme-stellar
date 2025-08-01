@@ -66,6 +66,15 @@ if (theme.style.prefers_theme === 'auto') {
       html += `</aside>`
       html += partial('_partial/menubtn')
     html += `</div>`
+    // ... 省略前面布局拼接 ...
+    // 回到顶部按钮
+    html += `<button id="back-to-top" title="回到顶部">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="14" fill="rgba(255,255,255,0.85)"/>
+        <path d="M14 20V8M14 8L8 14M14 8L20 14" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>`;
+    // ... 省略后面布局拼接 ...
     html += `<div class="scripts">`
       html += partial('_partial/scripts')
     html += `</div>`

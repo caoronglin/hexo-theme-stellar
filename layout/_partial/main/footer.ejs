@@ -38,6 +38,9 @@ function layoutDiv() {
   if (content) {
     el += markdown(content)
   }
+  el += '<div style="font-size: 1rem;text-align: center; margin: 1rem 0; color:var(--text-p4);">'
+  el += '发表了 ' + site.posts.length + ' 篇文章 🔸 总计 ' + totalcount(site) + ' 字'
+  el += '</div>'
   el += '</div></footer>'
   return el
 }

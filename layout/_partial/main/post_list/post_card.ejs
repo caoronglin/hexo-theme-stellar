@@ -92,6 +92,17 @@ function div_default() {
       }
     }
   }
+    // 新增：标签显示
+  // tags
+  if (post.layout === 'post' && post.tags && post.tags.length > 0) {
+    post.tags.forEach((tag, i) => {
+      el += '<span style="font-size: 0.9rem;margin-right: 4px; border-radius: 7px;">';
+      el += '<span style="color: #1eb4ef; margin-right: 2px;">#</span>';
+      el += '<span style="color: #1eb4ef;">' + tag.name + '</span>';
+      el += '</span>';
+    });
+  }
+
   if (post.sticky) {
     el += `<span class="pin">${icon('default:pin')}</span>`
   }
